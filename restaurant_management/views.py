@@ -2,12 +2,12 @@ from django.conf import settings
 from django.shortcuts import render
  def home(request):
     context ={
-        'phone_number': settings.RESTAURANT_PHONE
-        
+       'restuarant_name': getattr(setting, 'RESTAURANT_NAME', 'My Restaurant')
+       
 
-        }
+       }
 
-        return render(request,'home.html', context)
+       return render(request,'home.html', context)
        
         
 
