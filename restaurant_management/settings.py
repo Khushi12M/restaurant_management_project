@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 RESTAURANT_PHONE ="91 98765 43210"
+RESTAURANT_NAME ="The Food Palace"
 
 
 # Application definition
