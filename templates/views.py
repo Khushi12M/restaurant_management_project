@@ -1,3 +1,5 @@
 from django.shortcuts import render
-def reservations(request):
-    return render(request, 'reservation.html')
+from datetime import datetime
+
+def homepage(request):
+    return render(request, 'homepage.html', {'year': datetime.now().year})
