@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Menu</title>
+    </head>
+    <body>
+        <h1>our Menu</h1>
+        {% if error_message %}
+        <p class="error">{{error_message}}</p>
+        {% endif %}
+        <ul>
+            {% for item in items %}
+            <li>{{item.name}} - {{item.price}}</li>
+            {% empty %}
+            <li> No items available at the moment.</li>
+            {% endfor %}
+        </ul>
+        <footer>
+            <p>&copy; {{year}} My Reataurant. All rights reserved</p>
+        </footer>
+    </body>
+</html>
