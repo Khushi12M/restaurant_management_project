@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>{{restaurant_name}}- Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Menu</title>
     </head>
     <body>
-        <h1>welcome to{{restaurant_name}}</h1>
-        <p> wec are delighted to serve you delicious meals and a wonderful dining experience</p>
+        <h1>Restaurant menu</h1>
+        <div class="menu-container">
+            {% for item in menu_items %}
+            <div class="menu_items">
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+                <p class="price">{{item.price}}</p>
+            </div>
+            {% empty%}
+            <p> No menu items availabe</p>
+            {% endfor %}
+        </div>
     </body>
 </html>
+      
