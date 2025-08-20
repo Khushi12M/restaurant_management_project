@@ -1,9 +1,11 @@
-<address>
-    {% if restaurant%}
-    {{restaurant.street_address}}<br>
-    {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip_code}}
-    {%else %}
-
-    Restaurant address not available
-    {% endif %}
-</address>
+<section id="contact-info">
+    <h2>our Location</h2>
+    <address>
+        [Restaurant Name]<br>
+        [Street Address]<br>
+        [city], [State/Province] [Postal Code]<br>
+        [Country]
+    </address>
+    <div id="map-container">
+    </div>
+</section>
