@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import MenuItem
 
-def home(request):
-     menu_item =MenuItem.objects.all()
-     return render(request, "home.html", {"menu_items": menu_items})
+def menu_page(request):
+    menu_items= MenuItem.objects.all().order_by('category', 'name')
+    
