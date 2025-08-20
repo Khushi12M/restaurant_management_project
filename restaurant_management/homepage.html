@@ -1,0 +1,9 @@
+<address>
+    {% if restaurant%}
+    {{restaurant.street_address}}<br>
+    {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip_code}}
+    {%else %}
+
+    Restaurant address not available
+    {% endif %}
+</address>
