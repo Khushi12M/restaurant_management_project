@@ -1,10 +1,14 @@
 from django.db import models
+import json
 
-class RestaurantAddress(models.Model):
+class Restaurant(models.Model):
      address = models.CharField(max_length=255)
      city = models.CharField(max_length=100)
      state = models.CharField(max_length=100)
     zip_code models.CharField(max_length=20)
 
+    opening_hours = models.JSONField(default=dict)
+
     def_str_(self):
-        return f "{self.address},{self.city}, {self.state} -{self.zip_code}"
+        return self.name
+       
