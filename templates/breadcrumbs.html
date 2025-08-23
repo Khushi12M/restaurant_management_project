@@ -1,0 +1,14 @@
+
+<nav aria-label="breadcrums">
+    <ol class="breadcrumb" style="background: none; padding: 8px;">
+    {% for name, url in breadcrumbs %}
+    {% if url %}
+    <li><a href="{{url}}">{{name}}</a> &gt;</li>
+    { % else %}
+    <li>{{name}}</li>
+    {% endif %}
+    {% endfor %}
+</nav>
+</ol>
+</nav>
+
