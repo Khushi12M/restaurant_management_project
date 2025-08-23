@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import RestaurantInfo
+from .models import Restaurant
 
-admin.site.register(RestaurantInfo)
+admin.site.register(Restaurant)
 
  
 
