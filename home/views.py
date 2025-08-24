@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from .models import RestaurantInfo
+def about(request):
+    context ={
+        "restaurant_name": "My Restaurant",
+        "history": "our restaurant was founded in 2005 "
+        "mission": "To serve delicious  food with love"
+    }
 
-def homepage(request):
-    restaurant= RestaurantInfo.objects.first()
-    return render(request, "home/index.html",{"restaurant": reataurant})
+    return render(request,"home/about.html", contaxt)
+
+
