@@ -1,12 +1,11 @@
-from django.conf import settings
-from django.conf.urls.static import static
+from django.conf import admin
 from django.urls import path, include
+from home import views
 
 urlpatterns[
-    path('', include('home.urls')),
-    path('menu/', include('Menu and order.urls')),
+    path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+    path('accounts/', include('django.contrib.auth.urls')),
+  
 ]
-
-if settings.DEBUG:
-    urlpattern+= static(settings.MEDIA_URL,document_root=settins.MEDIA_ROOT)
 
