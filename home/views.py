@@ -1,6 +1,9 @@
 from django.shortcuts import render
-def privacy_poilcy(request):
+ def home(request):
+    breadcrumbs=[
+        {"title": "Home", "url": "/"},
 
-   return render(request,"home/privacy.html")
+    ]
+    return render(request,"home.html", {"breadcrumbs": breadcrumbs})
 
 
