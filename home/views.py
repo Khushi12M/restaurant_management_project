@@ -1,11 +1,6 @@
 from django.shortcuts import render
-def about(request):
-    context ={
-        "restaurant_name": "My Restaurant",
-        "history": "our restaurant was founded in 2005 "
-        "mission": "To serve delicious  food with love"
-    }
+def privacy_poilcy(request):
 
-    return render(request,"home/about.html", context)
+   return render(request,"home/privacy.html")
 
 
