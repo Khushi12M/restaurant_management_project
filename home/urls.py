@@ -1,6 +1,5 @@
-from django.urls import path
-from .views import home_view
+from django.shortcuts import render
+ def home(request):
 
-urlpatterns=[
-    path('', home_view, name='home')
+    return render(request,'home.html')
 ]
