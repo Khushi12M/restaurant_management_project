@@ -6,6 +6,6 @@ def about(request):
         "mission": "To serve delicious  food with love"
     }
 
-    return render(request,"home/about.html", contaxt)
+    return render(request,"home/about.html", context)
 
 
