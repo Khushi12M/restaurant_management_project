@@ -1,10 +1,5 @@
 from django.contrib import admin
-from .models import *
-
-
-# Custom Admins
-class ItemAdmin(admin.ModelAdmin):
-    list_display = ['item_name','item_price','created_at']
+from .models import TodaySpecial
 
 
 # Register your models here.
