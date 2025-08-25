@@ -1,11 +1,11 @@
-from django.conf import admin
-from django.urls import path, include
-from home import views
+
+from django.urls import path
+from. import views
+
 
 urlpatterns[
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('about/', views.about_view, name='about'),
+
   
 ]
 
