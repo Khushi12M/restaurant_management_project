@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping cart</title>
+    </head>
+    <body>
+        <h2 style="text-align:center:">Your Cart</h2>
+        {% if items %}
+        <table>
+            <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            </tr>
+            <td>{{entry.item.name}}</td>
+            <td>{{entry.quantity}}</td>
+        </table>
+    </body>
+</html>
