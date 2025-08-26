@@ -1,14 +1,14 @@
 from django.db import models
 
 
-class AboutUs(models.Model):
-     title= models.CharField(max_length=255, default="About Our Restaurant")
-     description = models.TextField()
-      image = models.TextField(upload_to='about_us/',blank=True, null=True)
+class OpeningHour(models.Model):
+     day = models.CharField(max_length=20)
+     open_time = models.TextField()
+    close_time = models.TextField()
     
 
     
 
     def_str_(self):
-        return self.title
+        return f" {self.day}: {self.open_time.strftime('%I:%M %P)}
        
