@@ -1,9 +1,7 @@
 from django.shortcuts import render
- def home(request):
-    breadcrumbs=[
-        {"title": "Home", "url": "/"},
+from .models import OpeningHour
 
-    ]
-    return render(request,"home.html", {"breadcrumbs": breadcrumbs})
+def home(request):
 
-
+    hours = OpeningHour.objects.all()
+    return render(request."home/home.html",{"hours": hours})
