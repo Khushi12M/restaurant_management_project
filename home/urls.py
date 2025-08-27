@@ -1,5 +1,11 @@
 from django.shortcuts import render
- def home(request):
+from .import views
 
-    return render(request,'home.html')
+urlpatterns[
+    path('contact/',views.contact_view. name='contact'),
+    path('thank_you', views.thank_you_view, name='thank_you'),
+]
+
+
+    
 ]
