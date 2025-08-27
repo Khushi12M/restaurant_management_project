@@ -4,7 +4,7 @@ from. import views
 
 
 urlpatterns[
-    path('about/', views.about_view, name='about'),
+    path('contact/', views.contact_us, name='contact'),
 
   
 ]
