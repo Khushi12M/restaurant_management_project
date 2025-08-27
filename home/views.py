@@ -5,14 +5,12 @@ def contact_view(request):
     if request.method =="POST"
     form = ContactForm(request.POST)
     if form.is_valid():
-        name = form.cleaned_data['name']
-        email = form.cleaned_data['email']
-        message = form.cleaned_data['message']
-{}
-        print(f"New messgae from {name} ("{email}): {message}")
+        form.save()
+        return redirect('thank_you')
 
- 
-    return render(request."home/contact_success.html",{"name": name})
     else:
         form = ContactForm()
-        return render(request. "home/contact.html", {"form": form})
+        return render(request. "contact.html", {"form": form})
+
+        def thank_you(request):
+            return render(request,'thank_you.html')
