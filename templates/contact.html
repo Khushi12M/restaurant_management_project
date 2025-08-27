@@ -8,13 +8,12 @@
 
         <h2> Contact Us</h2>
         <p><strong>Address:</strong>{{restaurant.address}}</p>
-        <form method="post">
-            {% csrf_token%}
-            <input type="text" name="name" placeholder="Your Name"><br><br>
-            <input type="email" name="email" placeholder="Your Email"><br><br>
-            <textarea name="message" placeholder="Your Message"></textarea><br><br>
+        <p><strong>Phone:</strong>{{restaurant.phone}}</p>
+        <p><strong>Email:</strong>{{restaurant.email}}</p>
+        {% else %}
 
-            <button type="submit">Send</button>
-        </form>
+        <p>restaurant details not available</p>
+        {% endif %}
+       
     </body>
 </html>
