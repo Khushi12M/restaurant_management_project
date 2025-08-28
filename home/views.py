@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from  restaurant_management .models import RestaurantInfo
+from. models import Chef
 
-def contact_view(request):
-    restaurant = RestaurantInfo.objects.first()
-    return render(request,'contact.html',{'restaurant: restaurant'})
-   
+def about_chef(request):
+    chef= Chef.objects.first()
+    return render(request,'about_chef.html',{'chef': chef})
