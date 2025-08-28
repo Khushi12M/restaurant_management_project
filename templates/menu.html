@@ -1,14 +1,9 @@
-<h2>Menu</h2>
-<ul>
-    {% for item in page_obj %}
-    <li>{{item.name}}-{{item.price}}</li>
-    {% endfor %}
-</ul>
+{% for item in page_obj %}
+<div class="menu_item">
+    {% if item.image %}
+    <img src="{{item.image.url}}" alt="{{item.name}}">
+    {% else %}
 
-<div class="pagination">
-    {% if page_obj.has_previous %}
-    <a href="?page=1">First</a>
-    <a href="?page={{page_obj.prevous_page_number}}">Previous</a>
     {% endif %}
-
+    <p>{{item.name}}- {{item.price}}</p>
 </div>
