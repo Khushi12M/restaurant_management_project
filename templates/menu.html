@@ -1,9 +1,7 @@
-{% for item in page_obj %}
-<div class="menu_item">
-    {% if item.image %}
-    <img src="{{item.image.url}}" alt="{{item.name}}">
-    {% else %}
+{% load menu_filters %}
 
-    {% endif %}
-    <p>{{item.name}}- {{item.price}}</p>
-</div>
+<ul>
+    {% for items in menu_items %}
+    <li> {{item|availability_status}} -${{item.price}}</li>
+    {% endfor %}
+</ul>
